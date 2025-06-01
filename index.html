@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunt Finder Mamacos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="logo-title">
+    <img src="logo.png" alt="Logo do Hunt Finder Mamacos" />
+    <div class="monkey-hang"></div>
+    Hunt Finder Mamacos
+  </div>
+  <span class="subtitle">A comunidade que encontra seu melhor spot</span>
+  <div class="auth" style="display: none;"> <!-- ESCONDIDO TEMPORARIAMENTE -->
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="fazerLogin()" id="login-btn">Login</button>
+    <button onclick="fazerLogout()" id="logout-btn" style="display: none;">Sair</button>
+    <span id="user-status"></span>
+  </div>
+</header>
+<!-- Adicione isso ao seu index.html, perto dos outros modais (como #modal e #novaHuntModal) -->
+<div id="modalGenerico" class="modal" style="display: none;">
+  <div class="modal-content modal-metricas-content"> <!-- Use a classe que você estiliza -->
+    <h2 class="modal-titulo">Título das Métricas</h2>  <!-- Elemento para o título -->
+    <div class="modal-corpo">                       <!-- Elemento para o conteúdo HTML -->
+      <!-- Conteúdo das métricas será inserido aqui pelo JavaScript -->
+    </div>
+    <button class="btn-fechar-modal" style="margin-top: 15px;">Fechar</button> <!-- Botão para fechar -->
+  </div>
+</div>
+  <main>
+<section class="filtro">
+  <!-- Botão "Free + Premium Hunts" REMOVIDO -->
+  <button id="btn-vip">Player Hunts</button> <!-- onclick e disabled REMOVIDOS -->
+
+  <label for="vocacao">Vocação:</label>
+  <select id="vocacao"> <!-- style="display: none" que era controlado por JS não é mais necessário aqui -->
+    <option value="Knight">Knight</option>
+    <option value="Paladin">Paladin</option>
+    <option value="Druid">Mage</option> <!-- Mantido "Mage" para consistência com o JS -->
+    <option value="Monk">Monk</option>
+    <option value="Duo">Duo</option>
+    <option value="Team">Team</option>
+  </select>
+
+  <label for="nivel">Level:</label>
+  <input type="number" id="nivel" min="1" placeholder="Ex: 120">
+
+  <button onclick="buscarHunts()">Buscar Hunts</button>
+  <button onclick="abrirNovaHunt()" id="btn-nova-hunt">➕ Nova Hunt</button> <!-- style="display:none;" REMOVIDO -->
+</section>
+
+
+    <section id="resultados" class="hunt-lista"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Contribuir com a Hunt</h2>
+
+    <label>XP/h:</label>
+    <input type="number" id="inputXp" />
+
+    <label>Gold/h:</label>
+    <input type="number" id="inputGold" />
+
+    <label>Seu Level:</label>
+    <input type="number" id="inputLevel" placeholder="Seu Level" />
+
+    <label>Servidor:</label>
+    <select id="servidor">
+      <option value="">Selecione um servidor</option>
+      <option>Aethera</option><option>Ambra</option><option>Antica</option><option>Astera</option>
+      <option>Belobra</option><option>Bona</option><option>Bravoria</option><option>Calmera</option>
+      <option>Cantabra</option><option>Celebra</option><option>Celesta</option><option>Collabra</option>
+      <option>Descubra</option><option>Dia</option><option>Divina</option><option>Epoca</option>
+      <option>Esmera</option><option>Etebra</option><option>Ferobra</option><option>Fibera</option>
+      <option>Firmera</option><option>Flamera</option><option>Gentebra</option><option>Gladera</option>
+      <option>Gladibra</option><option>Gravitera</option><option>Harmonia</option><option>Havera</option>
+      <option>Honbra</option><option>Ignitera</option><option>Inabra</option><option>Issobra</option>
+      <option>Jacabra</option><option>Jadebra</option><option>Jaguna</option><option>Kalibra</option>
+      <option>Kalimera</option><option>Karmeya</option><option>Lobera</option><option>Luminera</option>
+      <option>Lutabra</option><option>Luzibra</option><option>Malivora</option><option>Menera</option>
+      <option>Monza</option><option>Nefera</option><option>Nevia</option><option>Noctalia</option>
+      <option>Obscubra</option><option>Oceanis</option><option>Ombra</option><option>Ourobra</option>
+      <option>Pacera</option><option>Peloria</option><option>Premia</option><option>Quebra</option>
+      <option>Quelibra</option><option>Quidera</option><option>Quintera</option><option>Rasteibra</option>
+      <option>Refugia</option><option>Retalia</option><option>Runera</option><option>Secura</option>
+      <option>Serdebra</option><option>Solidera</option><option>Sonira</option><option>Stralis</option>
+      <option>Talera</option><option>Temera</option><option>Thyria</option><option>Tornabra</option>
+      <option>Ulera</option><option>Unebra</option><option>Ustebra</option><option>Vandera</option>
+      <option>Venebra</option><option>Victoris</option><option>Vitera</option><option>Vunira</option>
+      <option>Wadira</option><option>Wildera</option><option>Wintera</option><option>Xybra</option>
+      <option>Xyla</option><option>Yara</option><option>Yonabra</option><option>Yovera</option>
+      <option>Yubra</option><option>Zephyra</option><option>Zuna</option><option>Zunera</option>
+    </select>
+
+    <label>Avaliação:</label><br>
+    <button onclick="setRating(1)" id="btn-gostei">👍 Gostei</button>
+    <button onclick="setRating(0)" id="btn-nao-gostei">👎 Não gostei</button><br><br>
+
+    <button onclick="salvarContribuicao()">Salvar</button>
+    <button onclick="fecharModal()">Fechar</button>
+  </div>
+</div>
+
+<div id="novaHuntModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Nova Hunt</h2>
+    <input type="text" id="novaHuntNome" placeholder="Nome da Hunt">
+    <input type="number" id="novaHuntLevel" placeholder="Level mínimo">
+    <select id="novaHuntVocacao">
+      <option>Knight</option>
+      <option>Paladin</option>
+      <option>Mage</option>
+      <option>Monk</option>
+    </select>
+    <select id="novaHuntTipo">
+      <option>solo</option>
+      <option>duo</option>
+      <option>team</option>
+    </select>
+    <button onclick="salvarNovaHunt()">Salvar Hunt</button>
+    <button onclick="fecharNovaHunt()">Fechar</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

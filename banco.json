@@ -1,0 +1,49 @@
+[
+  {
+    "nome": "Test Hunt",
+    "nivel_min": 100,
+    "vocacoes": ["knight", "paladin", "mage"],
+    "tipo": "player",
+    "drops": ["gold coin", "mystic blade"],
+    "contribuicoes": [
+      { 
+        "xp": 780000, 
+        "gold": 210000, 
+        "servidor": "Antica",  
+        "level_personagem": 120,
+        "avaliacao": 1  
+      },
+      { 
+        "xp": 840000, 
+        "gold": 240000, 
+        "servidor": "Antica",  
+        "level_personagem": 130, 
+        "avaliacao": 1 
+      },
+      { 
+        "xp": 800000, 
+        "gold": 230000, 
+        "servidor": "Bona",   
+        "level_personagem": 125, 
+        "avaliacao": 0
+      },
+      { 
+        "xp": 900000, 
+        "servidor": "Celebra",    
+        "level_personagem": 150, 
+        "avaliacao": 1
+      },
+      { 
+        "gold": 250000,
+        "servidor": "Celebra",    
+        "level_personagem": 140, 
+        "avaliacao": 1
+      }
+    ],
+    "melhores_loots": [
+      { "nome": "Onyx Flail", "valor": 22000, "chance": 0.1 },
+      { "nome": "Assassin Dagger", "valor": 20000, "chance": 0.83 },
+      { "nome": "Skullcracker Armor", "valor": 18000, "chance": 0.31 }
+    ]
+  }
+]
