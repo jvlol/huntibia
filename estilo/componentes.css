@@ -1,0 +1,44 @@
+/* PAGINAÇÃO */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.pagination-controls button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    background-color: var(--cor-fundo-elemento);
+    border: 1px solid var(--cor-borda-suave);
+    color: var(--cor-texto-principal);
+}
+.pagination-controls button:hover:not(:disabled) {
+    background-color: var(--cor-fundo-elemento-hover);
+    border-color: var(--cor-highlight-amarelo);
+}
+.pagination-controls button:disabled,
+.pagination-controls button.active {
+    background-color: var(--cor-highlight-amarelo);
+    color: var(--cor-fundo-principal);
+    border-color: var(--cor-highlight-amarelo);
+    cursor: default;
+}
+.pagination-dots {
+    padding: 8px 5px;
+    color: var(--cor-texto-secundario);
+}
+
+/* ESTRELAS */
+.estrela-container { display: flex; gap: 2px; font-size: 1rem; justify-content: center; } /* Fonte ajustada */
+.estrela { position: relative; width: 1em; height: 1em; overflow: hidden; }
+.estrela-fundo { color: #333; position: absolute; width: 100%; height: 100%; } /* Fundo mais escuro */
+.estrela-preenchida {
+  position: absolute; height: 100%; top: 0; left: 0;
+  background: linear-gradient(to right, var(--cor-highlight-amarelo) 0%, var(--cor-highlight-amarelo) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  content: "★"; font-weight: bold; white-space: nowrap;
+}

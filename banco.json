@@ -1,49 +1,534 @@
-[
-  {
-    "nome": "Test Hunt",
-    "nivel_min": 100,
-    "vocacoes": ["knight", "paladin", "mage"],
-    "tipo": "player",
-    "drops": ["gold coin", "mystic blade"],
-    "contribuicoes": [
-      { 
-        "xp": 780000, 
-        "gold": 210000, 
-        "servidor": "Antica",  
-        "level_personagem": 120,
-        "avaliacao": 1  
-      },
-      { 
-        "xp": 840000, 
-        "gold": 240000, 
-        "servidor": "Antica",  
-        "level_personagem": 130, 
-        "avaliacao": 1 
-      },
-      { 
-        "xp": 800000, 
-        "gold": 230000, 
-        "servidor": "Bona",   
-        "level_personagem": 125, 
-        "avaliacao": 0
-      },
-      { 
-        "xp": 900000, 
-        "servidor": "Celebra",    
-        "level_personagem": 150, 
-        "avaliacao": 1
-      },
-      { 
-        "gold": 250000,
-        "servidor": "Celebra",    
-        "level_personagem": 140, 
-        "avaliacao": 1
-      }
+{
+    "Werehyana North": [],
+    "Rotworms Liberty Bay/Darashia": [
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 12,
+            "servidor": "Xybra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [
+                {
+                    "nome": "a health potion",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a gold coin",
+                    "quantidade": 1650
+                },
+                {
+                    "nome": "a spear",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a hunting spear",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a sentinel shield",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a cape",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a dead snake",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "lizard leather",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a lizard scale",
+                    "quantidade": 4
+                },
+                {
+                    "nome": "a cultish robe",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a rope belt",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "a zaoan monk robe",
+                    "quantidade": 1
+                }
+            ],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T17:25:42.893Z",
+            "vocacao_contribuicao": "Knight",
+            "skills_contribuicao": {
+                "meleeSkill": 15,
+                "shieldingSkill": 12
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 20,
+            "servidor": "Xybra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [
+                {
+                    "nome": "a health potion",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a gold coin",
+                    "quantidade": 1650
+                },
+                {
+                    "nome": "a spear",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a hunting spear",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a sentinel shield",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a cape",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a dead snake",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "lizard leather",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a lizard scale",
+                    "quantidade": 4
+                },
+                {
+                    "nome": "a cultish robe",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a rope belt",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "a zaoan monk robe",
+                    "quantidade": 1
+                }
+            ],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T18:33:37.528Z",
+            "vocacao_contribuicao": "Knight",
+            "skills_contribuicao": {
+                "meleeSkill": 20,
+                "shieldingSkill": 12
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 30,
+            "servidor": "Xybra",
+            "avaliacao": 0,
+            "itens_lootados_sessao": [
+                {
+                    "nome": "a health potion",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a gold coin",
+                    "quantidade": 1650
+                },
+                {
+                    "nome": "a spear",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a hunting spear",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a sentinel shield",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a cape",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a dead snake",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "lizard leather",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a lizard scale",
+                    "quantidade": 4
+                },
+                {
+                    "nome": "a cultish robe",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a rope belt",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "a zaoan monk robe",
+                    "quantidade": 1
+                }
+            ],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T18:34:09.268Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 20
+            }
+        },
+        {
+            "xp_ph": 300239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 222362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 13,
+            "servidor": "Xybra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [
+                {
+                    "nome": "a health potion",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a gold coin",
+                    "quantidade": 3650
+                },
+                {
+                    "nome": "a spear",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a hunting spear",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a sentinel shield",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a cape",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a dead snake",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "lizard leather",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a lizard scale",
+                    "quantidade": 4
+                },
+                {
+                    "nome": "a cultish robe",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a rope belt",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "a zaoan monk robe",
+                    "quantidade": 1
+                }
+            ],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T18:35:11.713Z",
+            "vocacao_contribuicao": "Paladin",
+            "skills_contribuicao": {
+                "distanceSkill": 35,
+                "shieldingSkill": 20
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 35,
+            "servidor": "Xybra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [
+                {
+                    "nome": "a health potion",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a gold coin",
+                    "quantidade": 1650
+                },
+                {
+                    "nome": "a spear",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a hunting spear",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a sentinel shield",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a cape",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "a dead snake",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "lizard leather",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a lizard scale",
+                    "quantidade": 4
+                },
+                {
+                    "nome": "a cultish robe",
+                    "quantidade": 2
+                },
+                {
+                    "nome": "a rope belt",
+                    "quantidade": 6
+                },
+                {
+                    "nome": "a zaoan monk robe",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "Alero",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "alecmineiro",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "https://youtube.com/alerinofc",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "Som novo na pista:",
+                    "quantidade": 1
+                },
+                {
+                    "nome": "https://open.spotify.com/intl-pt/track/502X5IaSCE79P9qseZNkFq?si=36ffd41691014c14",
+                    "quantidade": 1
+                }
+            ],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T18:52:29.455Z",
+            "vocacao_contribuicao": "Knight",
+            "skills_contribuicao": {
+                "meleeSkill": 35,
+                "shieldingSkill": 20
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 35,
+            "servidor": "Xybra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:04:32.816Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 25
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 35,
+            "servidor": "Ferobra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:07:06.379Z",
+            "vocacao_contribuicao": "Druid",
+            "skills_contribuicao": {
+                "magicLevel": 40
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 55,
+            "servidor": "Wadira",
+            "avaliacao": 0,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:09:28.777Z",
+            "vocacao_contribuicao": "Druid",
+            "skills_contribuicao": {
+                "magicLevel": 25
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 33,
+            "servidor": "Zephyra",
+            "avaliacao": 0,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:24:07.838Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 20
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 35,
+            "servidor": "Zephyra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:32:09.365Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 25
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 35,
+            "servidor": "Secura",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:34:04.000Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 30
+            }
+        },
+        {
+            "xp_ph": 400239,
+            "balanco_ph": 1716.1702127659573,
+            "duracao_min": 141,
+            "loot_total_sessao": 42362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 50,
+            "servidor": "Secura",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T19:36:02.056Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 56
+            }
+        }
     ],
-    "melhores_loots": [
-      { "nome": "Onyx Flail", "valor": 22000, "chance": 0.1 },
-      { "nome": "Assassin Dagger", "valor": 20000, "chance": 0.83 },
-      { "nome": "Skullcracker Armor", "valor": 18000, "chance": 0.31 }
+    "Werehyana South": [],
+    "Werehyana Southd": [],
+    "Werehyana Soeeeeeeeee": [
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 1556,
+            "servidor": "Divina",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T23:29:10.463Z",
+            "vocacao_contribuicao": "Druid",
+            "skills_contribuicao": {
+                "magicLevel": 115
+            }
+        },
+        {
+            "xp_ph": 4440239,
+            "balanco_ph": 2987.4074074074074,
+            "duracao_min": 81,
+            "loot_total_sessao": 1442362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 2322,
+            "servidor": "Etebra",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T23:30:30.739Z",
+            "vocacao_contribuicao": "Paladin",
+            "skills_contribuicao": {
+                "distanceSkill": 122,
+                "shieldingSkill": 122
+            }
+        },
+        {
+            "xp_ph": 100239,
+            "balanco_ph": 753.8317757009346,
+            "duracao_min": 321,
+            "loot_total_sessao": 12362,
+            "supplies_total_sessao": 8329,
+            "level_personagem": 122,
+            "servidor": "Monza",
+            "avaliacao": 1,
+            "itens_lootados_sessao": [],
+            "monstros_mortos_sessao": [],
+            "data_contribuicao": "2025-06-02T23:31:40.737Z",
+            "vocacao_contribuicao": "Sorcerer",
+            "skills_contribuicao": {
+                "magicLevel": 111
+            }
+        }
     ]
-  }
-]
+}

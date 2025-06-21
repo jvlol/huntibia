@@ -5,75 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hunt Finder Mamacos</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
   <div class="logo-title">
-    <img src="logo.png" alt="Logo do Hunt Finder Mamacos" />
-    <div class="monkey-hang"></div>
-    Hunt Finder Mamacos
+    <img src="logo.png" alt="Logo Hunt Finder Mamacos" />
+    <span>Hunt Finder Mamacos</span>
   </div>
   <span class="subtitle">A comunidade que encontra seu melhor spot</span>
-  <div class="auth" style="display: none;"> <!-- ESCONDIDO TEMPORARIAMENTE -->
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="senha" placeholder="Senha">
-    <button onclick="fazerLogin()" id="login-btn">Login</button>
-    <button onclick="fazerLogout()" id="logout-btn" style="display: none;">Sair</button>
-    <span id="user-status"></span>
-  </div>
+    <button id="btnModoAdmin" style="margin-left: auto; background-color: #888;">Modo Admin</button>
 </header>
-<!-- Adicione isso ao seu index.html, perto dos outros modais (como #modal e #novaHuntModal) -->
-<div id="modalGenerico" class="modal" style="display: none;">
-  <div class="modal-content modal-metricas-content"> <!-- Use a classe que você estiliza -->
-    <h2 class="modal-titulo">Título das Métricas</h2>  <!-- Elemento para o título -->
-    <div class="modal-corpo">                       <!-- Elemento para o conteúdo HTML -->
-      <!-- Conteúdo das métricas será inserido aqui pelo JavaScript -->
-    </div>
-    <button class="btn-fechar-modal" style="margin-top: 15px;">Fechar</button> <!-- Botão para fechar -->
-  </div>
-</div>
-  <main>
-<section class="filtro">
-  <!-- Botão "Free + Premium Hunts" REMOVIDO -->
-  <button id="btn-vip">Player Hunts</button> <!-- onclick e disabled REMOVIDOS -->
 
+<div id="painelAdmin" style="display:none; padding: 10px; background-color: #333; margin-top:10px; border: 1px solid #555;">
+  <h3>Painel Admin (Simulado)</h3>
+  <p>Hunt selecionada para editar GIF: <b id="adminHuntName">Nenhuma</b></p>
+  <label for="adminGifFile">Selecionar GIF para a Hunt:</label>
+  <input type="file" id="adminGifFile" accept="image/gif">
+  <img id="adminGifPreview" src="#" alt="Prévia do GIF" style="max-width: 80px; max-height: 80px; display: none; margin-top: 5px;">
+  <button onclick="salvarGifAdmin()">Definir GIF para Hunt</button>
+</div>
+
+<section class="filtro">
   <label for="vocacao">Vocação:</label>
-  <select id="vocacao"> <!-- style="display: none" que era controlado por JS não é mais necessário aqui -->
+  <select id="vocacao">
     <option value="Knight">Knight</option>
     <option value="Paladin">Paladin</option>
-    <option value="Druid">Mage</option> <!-- Mantido "Mage" para consistência com o JS -->
+    <option value="Druid">Mage</option>
     <option value="Monk">Monk</option>
     <option value="Duo">Duo</option>
     <option value="Team">Team</option>
   </select>
 
   <label for="nivel">Level:</label>
-  <input type="number" id="nivel" min="1" placeholder="Ex: 120">
+  <input type="number" id="nivel" min="1" placeholder="Ex: 100">
 
   <button onclick="buscarHunts()">Buscar Hunts</button>
-  <button onclick="abrirNovaHunt()" id="btn-nova-hunt">➕ Nova Hunt</button> <!-- style="display:none;" REMOVIDO -->
+  <button onclick="mostrarTodasAsHunts()">Mostrar Todas</button> 
+  <button onclick="abrirNovaHuntModal()" id="btn-nova-hunt">➕ Nova Hunt</button>
 </section>
 
+<main>
+  <section id="resultados-cards" class="hunt-cards-container"></section>
+</main>
 
-    <section id="resultados" class="hunt-lista"></section>
-  </main>
+<!-- Modal para exibir os DETALHES COMPLETOS da Hunt -->
+<div id="modalDetalhesHunt" class="modal" style="display: none;">
+  <div class="modal-content modal-detalhes-hunt-content">
+    <h2 id="detalhesHuntNome">Nome da Hunt</h2>
+    <div id="detalhesHuntCorpo" class="hunt-detalhes-corpo">
+      <!-- Conteúdo dos detalhes será injetado aqui -->
+    </div>
+    <div class="modal-actions">
+        <button id="btnContribuirDoDetalhe" class="btn-salvar">Contribuir nesta Hunt</button>
+        <button onclick="fecharModalDetalhesHunt()" class="btn-fechar">Fechar</button>
+    </div>
+  </div>
+</div>
 
-  <!-- Modal -->
-  <div id="modal" class="modal" style="display: none;">
-  <div class="modal-content">
-    <h2>Contribuir com a Hunt</h2>
+<!-- Modal de Contribuição -->
+<div id="modalContribuicao" class="modal" style="display: none;">
+  <div class="modal-content modal-contribuicao-content"> 
+    <h2>Contribuir com a Hunt: <span id="huntModalTitle"></span></h2>
 
-    <label>XP/h:</label>
-    <input type="number" id="inputXp" />
+    <label for="sessionData">Cole os dados da sua sessão do Tibia Analyzer aqui:</label>
+    <textarea id="sessionData" rows="8" placeholder="Session data: From ... to ...\nSession: HH:MMh\n..."></textarea>
 
-    <label>Gold/h:</label>
-    <input type="number" id="inputGold" />
+    <label for="inputLevelContribuicao">Seu Level na hunt:</label>
+    <input type="number" id="inputLevelContribuicao" placeholder="Ex: 150" />
 
-    <label>Seu Level:</label>
-    <input type="number" id="inputLevel" placeholder="Seu Level" />
-
-    <label>Servidor:</label>
-    <select id="servidor">
+    <label for="servidorContribuicao">Servidor:</label>
+    <select id="servidorContribuicao">
       <option value="">Selecione um servidor</option>
       <option>Aethera</option><option>Ambra</option><option>Antica</option><option>Astera</option>
       <option>Belobra</option><option>Bona</option><option>Bravoria</option><option>Calmera</option>
@@ -100,36 +103,80 @@
       <option>Yubra</option><option>Zephyra</option><option>Zuna</option><option>Zunera</option>
     </select>
 
-    <label>Avaliação:</label><br>
-    <button onclick="setRating(1)" id="btn-gostei">👍 Gostei</button>
-    <button onclick="setRating(0)" id="btn-nao-gostei">👎 Não gostei</button><br><br>
+    <label for="vocacaoContribuicao">Sua Vocação na hunt:</label>
+    <select id="vocacaoContribuicao" onchange="mostrarCamposSkill()">
+        <option value="">Selecione sua vocação</option>
+        <option value="Knight">Knight</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Druid">Druid</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Monk">Monk</option>
+    </select>
 
-    <button onclick="salvarContribuicao()">Salvar</button>
-    <button onclick="fecharModal()">Fechar</button>
+    <div id="camposSkillDinamicos">
+        <!-- Campos de skill aparecerão aqui via JS -->
+    </div>
+
+    <label>Avaliação:</label>
+    <div class="rating-buttons">
+        <button onclick="setRatingContribuicao(1)" id="btn-gostei" class="rating-btn">👍 Gostei</button>
+        <button onclick="setRatingContribuicao(0)" id="btn-nao-gostei" class="rating-btn">👎 Não gostei</button>
+    </div>
+    <div class="modal-actions">
+        <button onclick="salvarContribuicao()" class="btn-salvar">Salvar Contribuição</button>
+        <button onclick="fecharModalContribuicao()" class="btn-fechar">Fechar</button>
+    </div>
   </div>
 </div>
 
+<!-- Modal Nova Hunt -->
 <div id="novaHuntModal" class="modal" style="display:none;">
   <div class="modal-content">
-    <h2>Nova Hunt</h2>
-    <input type="text" id="novaHuntNome" placeholder="Nome da Hunt">
-    <input type="number" id="novaHuntLevel" placeholder="Level mínimo">
-    <select id="novaHuntVocacao">
-      <option>Knight</option>
-      <option>Paladin</option>
-      <option>Mage</option>
-      <option>Monk</option>
+    <h2>Criar Nova Hunt</h2>
+    <label for="novaHuntNome">Nome da Hunt:</label>
+    <input type="text" id="novaHuntNome" placeholder="Ex: Hero Fortress Edron">
+
+    <label for="novaHuntLevelMin">Level Mínimo Sugerido:</label>
+    <input type="number" id="novaHuntLevelMin" placeholder="Ex: 130">
+
+    <label for="novaHuntVocacaoPrincipal">Vocação Principal Sugerida (para filtro):</label>
+    <select id="novaHuntVocacaoPrincipal">
+      <option value="Knight">Knight</option>
+      <option value="Paladin">Paladin</option>
+      <option value="Druid">Mage (Druid/Sorc)</option>
+      <option value="Monk">Monk</option>
+      <option value_comment="Duo e Team definem vocação automaticamente abaixo">---</option>
+      <option value="Duo">Time: Duo</option>
+      <option value="Team">Time: Team</option>
     </select>
-    <select id="novaHuntTipo">
-      <option>solo</option>
-      <option>duo</option>
-      <option>team</option>
+
+    <label for="novaHuntTipo">Tipo de Hunt (Primário):</label>
+     <select id="novaHuntTipo">
+      <option value="player">Solo (específico para vocação acima)</option>
+      <option value="solo">Solo (genérico, pode aplicar a várias vocs)</option>
+      <option value="duo">Duo</option>
+      <option value="team">Team</option>
     </select>
-    <button onclick="salvarNovaHunt()">Salvar Hunt</button>
-    <button onclick="fecharNovaHunt()">Fechar</button>
+
+    <label for="novaHuntRecomendacoes">Recomendações Gerais (Ex: Levar Potions, Cuidado com Boss, etc.):</label>
+    <textarea id="novaHuntRecomendacoes" rows="3" placeholder="Dicas gerais, itens chave..."></textarea>
+
+    <div class="modal-actions">
+        <button onclick="salvarNovaHunt()" class="btn-salvar">Salvar Hunt</button>
+        <button onclick="fecharNovaHuntModal()" class="btn-fechar">Fechar</button>
+    </div>
   </div>
 </div>
 
-  <script src="script.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/utils.js"></script>
+<script src="scripts/data_parser.js"></script>
+<script src="scripts/data_manager.js"></script>
+<script src="scripts/ui_cards.js"></script>
+<script src="scripts/ui_modal_detalhes.js"></script>
+<script src="scripts/ui_modal_contribuicao.js"></script>
+<script src="scripts/ui_modal_novahunt.js"></script>
+<script src="scripts/admin_panel.js"></script>
+<script src="scripts/main.js"></script> 
 </body>
 </html>

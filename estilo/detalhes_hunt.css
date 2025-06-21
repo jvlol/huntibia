@@ -1,0 +1,271 @@
+/* ARQUIVO: estilo/detalhes_hunt.css */
+
+.hunt-detalhes-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.hunt-aggregated-stats-garmoth {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+.garmoth-stat {
+  background-color: var(--cor-fundo-elemento); 
+  padding: 12px 15px; 
+  border-radius: 6px;
+  border-left: 4px solid var(--cor-borda-destaque); 
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+.garmoth-stat label {
+  font-size: 0.75rem; 
+  color: var(--cor-texto-secundario); 
+  text-transform: uppercase;
+  display: block; 
+  margin-bottom: 6px; 
+  font-weight: 500;
+}
+.garmoth-stat span {
+  font-size: 1rem; 
+  font-weight: 600; 
+  color: var(--cor-highlight-amarelo);
+  display: block; 
+  line-height: 1.3;
+}
+.garmoth-stat span small.stat-min-max {
+  display: block; 
+  font-size: 0.75em; 
+  color: var(--cor-texto-secundario);
+  font-weight: normal; 
+  line-height: 1.2; 
+  margin-top: 4px;
+}
+
+.recomendacoes-detalhadas-hunt {
+    background-color: #2a2a33;
+    border-radius: 6px; 
+    padding: 18px;
+    border: 1px solid #3d3d44;
+}
+.hunt-descricao-original {
+    border-left: 4px solid var(--cor-highlight-azul) !important;
+    margin-bottom: 15px; 
+}
+.hunt-descricao-original h4 { 
+    color: var(--cor-highlight-azul) !important; 
+}
+.recomendacoes-detalhadas-hunt h4 {
+    margin-top: 0; 
+    margin-bottom: 12px; 
+    color: var(--cor-texto-label);
+    font-size: 0.95rem; 
+    text-transform: uppercase;
+    border-bottom: 1px solid #45454d; 
+    padding-bottom: 10px;
+}
+.recomendacoes-detalhadas-hunt .recomendacao-texto {
+    font-size: 0.9rem; 
+    color: #d0d0d5; 
+    white-space: pre-wrap;
+    line-height: 1.55;
+    margin-bottom: 0; 
+}
+.recomendacoes-skills-faixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px 15px; 
+    font-size: 0.85rem;
+    margin-top: 10px; 
+}
+.skill-voc-label {
+    grid-column: 1 / -1; 
+    font-weight: bold; 
+    color: var(--cor-highlight-amarelo);
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    font-size: 0.9rem; 
+    display: block;
+}
+.skill-faixa-item {
+    color: var(--cor-texto-secundario); 
+    background-color: var(--cor-fundo-elemento);
+    padding: 7px 10px; 
+    border-radius: 4px; 
+    border-left: 3px solid var(--cor-borda-destaque);
+}
+.skill-faixa-item strong { 
+    color: var(--cor-texto-principal); 
+}
+
+
+/* LAYOUT DE DUAS COLUNAS PARA LOOTS E MONSTROS */
+.hunt-detalhes-duas-colunas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 15px;
+}
+.coluna-loots, .coluna-monstros {
+    flex-basis: 50%;
+    background-color: #282830; 
+    border-radius: 6px;
+    padding: 18px; 
+    border: 1px solid var(--cor-borda-suave);
+}
+.coluna-titulo {
+    font-size: 0.9rem; 
+    color: var(--cor-texto-label);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cor-borda-destaque);
+}
+
+/* SEÇÃO DE LOOTS DENTRO DA COLUNA */
+.hunt-loots-section-container .top-loot-icons { /* Para aplicar apenas aos ícones de loot */
+  display: flex; 
+  gap: 8px; 
+  margin-bottom: 15px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #3a3a42; 
+  flex-wrap: wrap;
+}
+.hunt-loots-section-container .top-loot-icons img {
+  width: 26px; height: 26px; border-radius: 3px;
+  background-color: var(--cor-fundo-elemento); 
+  padding: 2px; border: 1px solid #404048;
+}
+.hunt-loots-section-container .top-loot-icons small { 
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+    width: 100%; 
+}
+
+/* Cabeçalho da lista de loots */
+.loots-lista-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--cor-texto-secundario);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--cor-borda-destaque);
+    margin-bottom: 5px;
+}
+.loots-lista-header .header-item-nome { flex-basis: 50%; text-align: left; } 
+.loots-lista-header .header-item-stats { 
+    flex-basis: 50%; 
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+.loots-lista-header .sub-header-qtd,
+.loots-lista-header .sub-header-perc {
+    flex-basis: auto; 
+    min-width: 50px; 
+    text-align: right;
+}
+.loots-lista-header .sub-header-perc { padding-left: 5px; }
+
+
+/* Lista Vertical de Loots */
+.loots-lista-vertical {
+  display: flex; flex-direction: column; gap: 1px;
+  max-height: 260px; overflow-y: auto; padding: 2px;
+  border: 1px solid #2f2f36; border-radius: 4px;
+}
+.loots-lista-vertical .loot-lista-vertical-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 10px; font-size: 0.88rem; line-height: 1.4;
+}
+.loots-lista-vertical .loot-lista-vertical-item:nth-child(even) {
+    background-color: #2e2e37; border-radius: 3px;
+}
+.loots-lista-vertical .loot-lista-vertical-nome {
+  color: var(--cor-texto-principal); flex-grow: 1; 
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 10px; 
+}
+.loots-lista-vertical .loot-lista-vertical-stats {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-basis: 130px; flex-shrink: 0; text-align: right;
+}
+.loots-lista-vertical .loot-lista-vertical-qtd {
+  color: var(--cor-highlight-amarelo); font-weight: 500;
+  min-width: 55px; text-align: right;
+}
+.loots-lista-vertical .loot-lista-vertical-perc {
+  color: var(--cor-texto-secundario); font-weight: 500; font-size: 0.9em;
+  min-width: 55px; text-align: right; padding-left: 5px;
+}
+
+/* Cabeçalho da lista de monstros */
+.monstros-lista-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--cor-texto-secundario);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--cor-borda-destaque);
+    margin-bottom: 5px;
+}
+.monstros-lista-header .header-item-nome { /* Reutilizando classe com nome ajustado */
+    flex-grow: 1; text-align: left; 
+}
+.monstros-lista-header .header-monstro-media {
+    flex-basis: 100px; /* Ajuste para largura de "Média/Sessão" */
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+/* Lista Vertical de Monstros */
+.monstros-lista-vertical {
+  display: flex; flex-direction: column; gap: 1px;
+  max-height: 260px; overflow-y: auto; padding: 2px;
+  border: 1px solid #2f2f36; border-radius: 4px;
+}
+.monstros-lista-vertical .monstro-lista-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 10px; font-size: 0.88rem; line-height: 1.4;
+}
+.monstros-lista-vertical .monstro-lista-item:nth-child(even) {
+    background-color: #2e2e37; border-radius: 3px;
+}
+.monstros-lista-vertical .monstro-lista-item-nome {
+  color: var(--cor-texto-principal); flex-grow: 1; 
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 10px; 
+}
+.monstros-lista-vertical .monstro-lista-item-media {
+    color: var(--cor-highlight-amarelo); font-weight: 500;
+    flex-basis: 100px; /* Mesma largura do cabeçalho */
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* Mensagens de "Nenhum..." */
+.no-loot-message, .no-monsters-message {
+    color: var(--cor-texto-secundario); 
+    font-style: italic;
+    text-align: center; 
+    padding: 15px 0;
+}
+
+/* Media query para empilhar colunas em telas menores */
+@media (max-width: 800px) {
+    .hunt-detalhes-duas-colunas {
+        flex-direction: column;
+    }
+    .coluna-loots, .coluna-monstros {
+        flex-basis: auto;
+        margin-top: 15px; /* Adiciona um pouco de espaço quando empilhadas */
+    }
+    .coluna-loots:first-child { margin-top: 0;} /* Remove margem do primeiro item empilhado */
+}

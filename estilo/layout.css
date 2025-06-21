@@ -1,0 +1,77 @@
+/* === HEADER === */
+header {
+  background-color: #16161a;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-title {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: #e0e0e0;
+  text-shadow: 1px 1px 0 #111;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.logo-title img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.subtitle {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: var(--cor-texto-secundario);
+  margin-left: auto;
+  padding-left: 1rem;
+}
+header button#btnModoAdmin { /* Botão admin no header */
+    padding: 0.5rem 0.8rem;
+    background-color: #6c757d; /* Cor específica ou use var */
+    border-color: #6c757d;
+    font-size: 0.85rem;
+}
+header button#btnModoAdmin:hover {
+    background-color: #5a6268;
+}
+
+
+/* === FILTRO === */
+.filtro {
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1d;
+  border-bottom: 1px solid var(--cor-borda-destaque);
+  position: sticky;
+  /* Ajuste este 'top' baseado na altura final do seu header */
+  top: calc(1rem + 1rem + 38px + 0.2rem + 4px); 
+  z-index: 99;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.filtro label {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-label);
+}
+.filtro input, .filtro select {
+  font-size: 0.9rem; /* Inputs e selects do filtro */
+}
+.filtro button { /* Botões dentro do filtro já usam o estilo base de 'button' */
+    /* Se quiser um estilo específico para os botões do filtro, adicione aqui */
+    /* Ex: background-color: var(--cor-alguma-outra-cor); */
+}
+
+
+/* === MAIN CONTENT AREA === */
+main { width: 100%; padding-top: 20px; }

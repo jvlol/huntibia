@@ -1,0 +1,50 @@
+#painelAdmin {
+    color: var(--cor-texto-label);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 1px solid var(--cor-borda-destaque);
+    background-color: var(--cor-fundo-secundario); /* Mesmo fundo dos cards */
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+#painelAdmin h3 {
+    color: var(--cor-highlight-amarelo);
+    margin-top: 0; /* Removido margin-top padrão */
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cor-borda-suave);
+}
+#painelAdmin p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+#painelAdmin label {
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+}
+#painelAdmin input[type="file"], 
+#painelAdmin button {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+    width: 100%;
+    margin-top: 6px;
+}
+#painelAdmin input[type="file"] {
+    background-color: var(--cor-fundo-elemento);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
+    padding: 8px; /* Input de arquivo é um pouco diferente */
+}
+#painelAdmin button {
+    background-color: var(--cor-botao-acao-bg);
+    border-color: var(--cor-botao-acao-bg);
+}
+#painelAdmin button:hover {
+    background-color: var(--cor-botao-acao-hover);
+}
+#adminGifPreview {
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 4px;
+    background-color: var(--cor-fundo-elemento);
+}

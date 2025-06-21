@@ -1,0 +1,53 @@
+body {
+  font-family: var(--font-principal);
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* INPUTS, SELECTS GERAIS */
+input, select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda-suave);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: var(--cor-fundo-elemento);
+  color: var(--cor-texto-principal);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+input::placeholder { color: #777; }
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--cor-highlight-amarelo); 
+  background-color: var(--cor-fundo-elemento-hover);
+}
+
+/* BOTÃO BASE GERAL */
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--cor-botao-acao-bg);
+  border: 1px solid var(--cor-botao-acao-bg);
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+button:hover:not(:disabled) {
+  background-color: var(--cor-botao-acao-hover);
+  border-color: var(--cor-botao-acao-hover);
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Scrollbar customizado */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--cor-fundo-elemento); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: var(--cor-borda-destaque); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: lighten(var(--cor-borda-destaque), 10%); }

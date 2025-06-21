@@ -1,0 +1,78 @@
+.modal {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(10, 10, 15, 0.9);
+  display: none; justify-content: center; align-items: center;
+  z-index: 1000; padding: 20px;
+}
+.modal-content {
+  background: var(--cor-fundo-modal);
+  padding: 25px 30px; border-radius: 10px; width: 95%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7); color: var(--cor-texto-principal);
+  display: flex; flex-direction: column; gap: 18px;
+  max-height: 90vh; overflow-y: auto;
+  border: 1px solid var(--cor-borda-modal);
+}
+.modal-detalhes-hunt-content { max-width: 850px; }
+.modal-contribuicao-content, #novaHuntModal .modal-content { max-width: 600px; }
+
+.modal-content h2 {
+  margin: 0 0 15px 0; font-size: 1.6rem; color: var(--cor-highlight-amarelo);
+  text-align: center; padding-bottom: 15px;
+  border-bottom: 1px solid var(--cor-borda-modal);
+}
+.modal-content label {
+  font-size: 0.9rem; color: var(--cor-texto-label); margin-bottom: 0px; display: block;
+}
+.modal-content input, .modal-content select, .modal-content textarea {
+  background-color: var(--cor-fundo-elemento);
+  color: var(--cor-texto-principal); border: 1px solid var(--cor-borda-suave);
+  padding: 12px; font-size: 0.95rem; margin-top: 5px;
+}
+.modal-content input:focus, .modal-content select:focus, .modal-content textarea:focus {
+    border-color: var(--cor-highlight-amarelo); /* Foco amarelo no modal */
+    background-color: var(--cor-fundo-elemento-hover);
+}
+.modal-content textarea { min-height: 80px; resize: vertical; }
+
+.rating-buttons { display: flex; gap: 12px; margin-top: 8px; }
+.rating-btn {
+    flex: 1; padding: 12px; font-size: 0.95rem;
+    border: 1px solid var(--cor-borda-suave) !important;
+    background-color: var(--cor-fundo-elemento) !important;
+    color: var(--cor-texto-principal) !important;
+}
+.rating-btn:hover { background-color: var(--cor-fundo-elemento-hover) !important; }
+.rating-btn.selected#btn-gostei { background-color: var(--cor-rating-gostei) !important; border-color: var(--cor-rating-gostei) !important; color: white !important;}
+.rating-btn.selected#btn-nao-gostei { background-color: var(--cor-rating-naogostei) !important; border-color: var(--cor-rating-naogostei) !important; color: white !important;}
+
+.modal-actions { display: flex; gap: 15px; margin-top: 20px; justify-content: flex-end; }
+.modal-actions button { padding: 10px 20px; font-weight: 500; color: white; }
+
+/* BOTÕES SALVAR E FECHAR nos MODAIS */
+.btn-salvar, #btnContribuirDoDetalhe {
+    background-color: var(--cor-botao-acao-bg); /* Padronizado */
+    border-color: var(--cor-botao-acao-bg);
+}
+.btn-salvar:hover, #btnContribuirDoDetalhe:hover {
+    background-color: var(--cor-botao-acao-hover);
+    border-color: var(--cor-botao-acao-hover);
+}
+.btn-fechar {
+    background-color: var(--cor-botao-fechar-bg);
+    border-color: var(--cor-botao-fechar-bg);
+}
+.btn-fechar:hover { background-color: var(--cor-botao-fechar-hover); border-color: var(--cor-botao-fechar-hover); }
+
+/* CAMPOS DE SKILL DINÂMICOS NO MODAL DE CONTRIBUIÇÃO */
+#camposSkillDinamicos {
+    margin-top: 12px; padding: 15px; background-color: var(--cor-fundo-elemento);
+    border-radius: 5px; border: 1px solid var(--cor-borda-suave);
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 15px;
+}
+#camposSkillDinamicos label {
+    display: block; margin-bottom: 3px; font-size: 0.88rem; color: var(--cor-texto-label);
+}
+#camposSkillDinamicos input[type="number"] {
+    width: 100%; margin-bottom: 0;
+}

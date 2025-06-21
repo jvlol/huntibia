@@ -1,0 +1,25 @@
+:root {
+  --cor-fundo-principal: #0e0e10;
+  --cor-fundo-secundario: #1a1a1d;
+  --cor-fundo-elemento: #25252b;
+  --cor-fundo-elemento-hover: #2f2f36;
+  --cor-fundo-modal: #202026;
+  --cor-borda-modal: #383840;
+  --cor-texto-principal: #f0f0f0;
+  --cor-texto-secundario: #a0a0a5;
+  --cor-texto-label: #b8bcc2;
+  --cor-borda-suave: #303033;
+  --cor-borda-destaque: #4a4a50;
+  --cor-highlight-amarelo: #ffc107;
+  
+  /* Botões padronizados para cinza */
+  --cor-botao-acao-bg: #3a3a3c; 
+  --cor-botao-acao-hover: #525254;
+  --cor-botao-fechar-bg: #505058;
+  --cor-botao-fechar-hover: #686870;
+
+  --cor-rating-gostei: #28a745;
+  --cor-rating-naogostei: #dc3545;
+  --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-titulo: 'Montserrat', sans-serif;
+}
